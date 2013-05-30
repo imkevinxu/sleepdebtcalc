@@ -256,4 +256,12 @@ h1, h2, h3, h4, h5, h6 {
 input.error::-webkit-input-placeholder { color: #C0392B; }
 input.error:-moz-placeholder { color: #C0392B; }
 
-/* END SPACING */
+/* -----------------------------------------
+   RESPONSIVE STYLES
+----------------------------------------- */
+
+@media only screen and (max-device-width : 500px) {
+    #calculator #sleephours {
+        width: 100%;
+    }
+}
