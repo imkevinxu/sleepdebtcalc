@@ -13,6 +13,10 @@
 
         <input type="text" id="sleephours" placeholder="?">
 
+        <div id="suspicious" class="hidden">
+            <h3>You sleep more hours than there are in a day ಠ_ಠ</h3>
+        </div>
+
         <div id="congrats" class="hidden">
             <h3>Congratulations!<br/>
             You get more sleep than the average American :)</h3>
@@ -43,7 +47,7 @@
 <div id="pledge" class="row hidden">
     <div class="twelve columns">
 
-        <h1>Join {{n}} other people who have pledged to sleep away their sleep debt</h1>
+        <h1>Join {{n}} other people who have pledged to get rid of their sleep debt</h1>
 
         <form action="{% url create %}" method="post">{% csrf_token %}
 
@@ -63,7 +67,7 @@
     <div class="fb-like" data-href="http://sleepdebtcalc.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 
     <!-- Twitter Tweet Button -->
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ username }} has pledged to sleep more, what about you?" data-url="http://sleepdebtcalc.com/">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text='Cool "sleep debt" visualization calculator, check it out!' data-url="http://sleepdebtcalc.com/">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     <!-- Google+ Button -->

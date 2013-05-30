@@ -19,9 +19,13 @@
     if (isNumber(hours)) {
       timeout = setTimeout(function() {
         hours = parseFloat(hours);
-        $("#congrats, #good, #drowsy").addClass("hidden");
+        $("#suspicious, #congrats, #good, #drowsy").addClass("hidden");
         $("#pledge, .social").removeClass("hidden").addClass("animated fadeInDown");
-        if (hours > 8) {
+        $(".temp").remove();
+        if (hours >= 24) {
+          $("#suspicious").removeClass("hidden").addClass("animated fadeInDown");
+          $("#suspicious h3").after($(".social"));
+        } else if (hours > 8) {
           $("#congrats").removeClass("hidden").addClass("animated fadeInDown");
           $("#congrats h3").after($(".social"));
         } else if (hours == 8) {
@@ -30,7 +34,7 @@
         } else {
           $("#drowsy").removeClass("hidden").addClass("animated fadeInDown");
           $("#drowsy h3").after($(".social"));
-          $("#drowsy").append($(".social").clone());
+          $("#drowsy").append($(".social").clone().addClass("temp"));
           var debt = 8 - hours;
           $("#weektotal").text(7*debt + " HOURS");
           $("#monthtotal").text(31*debt + " HOURS");
@@ -45,7 +49,7 @@
             $("#yeardebt").append("<div class=\"block\"></div>");
           }
         }
-      }, 500);
+      }, 300);
     }
   });
 
