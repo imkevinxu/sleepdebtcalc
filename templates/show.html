@@ -1,44 +1,52 @@
 {% extends "base.html" %}
-{% block title %}{{ username }}'s {{ super() }}{% endblock %}
+{% block title %}{{ username }}'s Sleep Pledge{% endblock %}
 {% block meta_description %}{% endblock %}
 
 {% block extra_head %}{% endblock %}
 
 {% block content %}
 
-<div class="non-semantic-protector">
-    <h1 class="ribbon">
-        <strong class="ribbon-content">{{ username }}</strong>
-    </h1>
-</div>
-
-<div id="certificate" class="row">
+<div id="certificate" class="row animated fadeInDown">
     <div class="twelve columns">
 
-        <h3>Certified Walker 2013</h3>
+        <a href="{% url index %}" id="back"><i class="foundicon-left-arrow"></i></a>
 
-        <div class="row">
-            <div class="six columns">
-                <img src="http://farm1.staticflickr.com/13/14900584_05d7b5b5c6_b.jpg" id="walkingroad">
-            </div>
+        <h1>{{ username }}'s Sleep Pledge</h1>
 
-            <div class="six columns">
+        <p><strong>{{ username }}</strong> promises to work his hardest to sleep off his sleep debt and to maintain at least 8 hours of sleep a night on average.</p>
 
-                <p><strong>{{ username }}</strong> is a certified walker in the Walk Year registry for 2013. I have committed to walking more each day to live a healthier life and be more awesome. </p>
+        <blockquote>
+            The amount of sleep required by the average person is five minutes more.<br/>
+            - Wilson Mizener
+        </blockquote>
 
-                <blockquote>Researchers found that walking briskly for 30 minutes every day lowers your odds ... of heart disease, diabetes, and stroke. <a href="http://articles.cnn.com/2008-06-12/health/healthmag.walking.health_1_metabolic-syndrome-reduction-in-heart-disease-risk-postmenopausal-women?_s=PM:HEALTH" target="_blank">[citation]</a></blockquote>
+        <div class="social">
+            <!-- Facebook Like Button -->
+            <div class="fb-like" data-href="http://sleepdebtcalc.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 
-                <p>
-                    <strong>Participate</strong> in the race.
-                    <strong>Try</strong> out the <a href="http://www.walkingwizard.org/" target="_blank">Walking Wizard</a>.<br/>
-                    <strong>Share</strong> your Walk Year certificate.
-                </p>
+            <!-- Twitter Tweet Button -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ username }} has pledged to sleep more, what about you?" data-url="http://sleepdebtcalc.com/">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-                <a href="https://twitter.com/share" class="twitter-share-button" data-text="I'm a Certified Walker for 2013" data-via="walkyear" data-size="large" data-related="imkevinxu" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-            </div>
+            <!-- Google+ Button -->
+            <div class="g-plusone" data-size="medium"></div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
         </div>
+
+        <h3>Did you know that...</h3>
+        <ul>
+            <li>Americans sleep 6.9 hours per night on average? <a href="http://www.scientificamerican.com/article.cfm?id=fact-or-fiction-can-you-catch-up-on-sleep" target="_blank">[source]</a></li>
+            <li>There are 4 stages of sleep? 3 stages of non-rapid eye movement and the deep or "dream" stage with rapid eye movement (REM) <a href="http://en.wikipedia.org/wiki/Sleep" target="_blank">[source]</a></li>
+            <li>You can learn to control your dreams with lucid dreaming? <a href="http://en.wikipedia.org/wiki/Lucid_dream" target="_blank">[source]</a></li>
+        </ul>
+
+        <p>Learn more about sleep from the founder of the science of sleep, <a href="http://en.wikipedia.org/wiki/William_C._Dement" target="_blank">Dr. William Dement</a>. Visit his site here <a href="http://www.end-your-sleep-deprivation.com/" target="_blank">http://www.end-your-sleep-deprivation.com/</a></p>
 
     </div>
 </div>

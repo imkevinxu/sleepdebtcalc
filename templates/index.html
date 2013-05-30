@@ -43,22 +43,38 @@
 <div id="pledge" class="row hidden">
     <div class="twelve columns">
 
-        <center>
-            <h1>Join {{n}} other people who have pledged to sleep away their sleep debt</h1>
+        <h1>Join {{n}} other people who have pledged to sleep away their sleep debt</h1>
 
-            <form action="{% url create %}" method="post">{% csrf_token %}
+        <form action="{% url create %}" method="post">{% csrf_token %}
 
-                <label for="username">I, </label>
-                <input type="text" name="username" id="username" placeholder="Gatsby">
-                <label for="username">, pledge to sleep more</label>
+            <label for="username">I, </label>
+            <input type="text" name="username" id="username" placeholder="Gatsby">
+            <label for="username">, pledge to sleep more</label>
 
-                <input type="submit" value="I Promise" />
+            <input type="submit" value="I Promise" />
 
-            </form>
-
-        </center>
+        </form>
 
     </div>
+</div>
+
+<div class="social hidden">
+    <!-- Facebook Like Button -->
+    <div class="fb-like" data-href="http://sleepdebtcalc.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+
+    <!-- Twitter Tweet Button -->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ username }} has pledged to sleep more, what about you?" data-url="http://sleepdebtcalc.com/">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <!-- Google+ Button -->
+    <div class="g-plusone" data-size="medium"></div>
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
 </div>
 
 {% endblock %}

@@ -13,8 +13,6 @@
 .hidden { display: none; }
 .inline_block { display: inline-block; }
 .error { color: #C0392B; }
-input.error::-webkit-input-placeholder { color: #C0392B; }
-input.error:-moz-placeholder { color: #C0392B; }
 
 /* -----------------------------------------
    BASE Styles
@@ -131,6 +129,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #9B59B6;
 }
 
+#calculator #yeardebt {
+    margin-bottom: 30px;
+}
+
 /* -----------------------------------------
    PLEDGE Styles
 ----------------------------------------- */
@@ -142,12 +144,14 @@ h1, h2, h3, h4, h5, h6 {
 #pledge h1 {
     font-weight: 300;
     font-size: 3rem;
+    text-align: center;
 }
 
 #pledge form {
     margin: 50px auto;
     background-color: #ECF0F1;
     padding: 60px 0;
+    text-align: center;
 }
 
 #pledge form label {
@@ -184,6 +188,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
     padding: 15px 50px;
     color: white;
+    margin: 0 auto;
     margin-top: 50px;
 }
 
@@ -191,71 +196,64 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #27AE60;
 }
 
-
-
+/* -----------------------------------------
+   CERTIFICATE Styles
+----------------------------------------- */
 
 #certificate {
-    border: 1px solid #ccc;
-    background-image: url(http://subtlepatterns.com/patterns/lightpaperfibers.png);
-    padding: 1.5em 3em 3em;
-    -moz-box-shadow:    3px 3px 6px 0px #A0A0A0;
-    -webkit-box-shadow: 3px 3px 6px 0px #A0A0A0;
-    box-shadow:         3px 3px 6px 0px #A0A0A0;
+    margin-top: 30px;
+}
+
+#certificate h1 {
+    background-color: #3498DB;
+    text-align: center;
+    color: white;
+    padding: 30px;
 }
 
 #certificate h3 {
-    font-family: 'Buenard', serif;
-    font-size: 3.5rem;
+    background-color: #BDC3C7;
     text-align: center;
-    margin-bottom: 25px;
+    color: white;
+    padding: 10px;
+    margin: 30px auto;
 }
 
+#certificate p, #certificate li {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
 
-.ribbon {
-    font-size: 24px !important;
-    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-    width: 50%;
+#certificate blockquote {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/* -----------------------------------------
+   MISCELLANEOUS Styles
+----------------------------------------- */
+
+#back {
+    float: left;
     position: relative;
-    background: #50ACEB;
-    color: #fff;
+    left: -120px;
+    color: inherit;
+    font-size: 5.5rem;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+#back:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    cursor: pointer;
+}
+
+.social {
     text-align: center;
-    padding: .7em 2em; /* Adjust to suit */
-    margin: 2em auto 2em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
-.ribbon:before, .ribbon:after {
-    content: "";
-    position: absolute;
-    display: block;
-    bottom: -1em;
-    border: 1.3em solid #4391C6;
-    z-index: -1;
-}
-.ribbon:before {
-    left: -2em;
-    border-right-width: 1.7em;
-    border-left-color: transparent;
-}
-.ribbon:after {
-    right: -2em;
-    border-left-width: 1.7em;
-    border-right-color: transparent;
-}
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
-    content: "";
-    position: absolute;
-    display: block;
-    border-style: solid;
-    border-color: #4F6E96 transparent transparent transparent;
-    bottom: -1em;
-}
-.ribbon .ribbon-content:before {
-    left: 0;
-    border-width: 1em 0 0 1em;
-}
-.ribbon .ribbon-content:after {
-    right: 0;
-    border-width: 1em 1em 0 0;
-}
-.non-semantic-protector { position: relative; z-index: 1; }
+
+input.error::-webkit-input-placeholder { color: #C0392B; }
+input.error:-moz-placeholder { color: #C0392B; }
 
 /* END SPACING */

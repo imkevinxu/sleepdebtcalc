@@ -24,7 +24,7 @@ def index(request):
 
 def create(request):
     if request.POST and "username" in request.POST:
-        username = request.POST["username"].lower().replace(" ", "")
+        username = request.POST["username"]
         if username in reserved:
             return redirect(index)
 
@@ -38,7 +38,7 @@ def create(request):
 
 def show(request, username):
     try:
-        sleeper = Sleeper.objects.get(username=username.lower())
+        sleeper = Sleeper.objects.get(username=username)
         return render(request, "show.html", locals())
     except Sleeper.DoesNotExist:
         return redirect(index)
