@@ -57,6 +57,8 @@
     return !isNaN(parseFloat(n)) && isFinite(n);
   };
 
+  $.scrollDepth();
+
   /* -----------------------------------------
      ZURB FOUNDATION INITIALIZATION
   ----------------------------------------- */
