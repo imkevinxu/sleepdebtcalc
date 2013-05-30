@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
 
-    <title>{% block title %}Sleepdebtcalc{% endblock %}</title>
+    <title>{% block title %}Sleep Debt Calc{% endblock %}</title>
     <meta name="description" content="{% block meta_description %}{% endblock %}" />
     {# TODO: <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}images/favicon.png" /> #}
 
@@ -32,6 +32,7 @@
     <!-- Included CSS Files -->
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/normalize.css" />
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/foundation.min.css" />
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/animate-custom.css" />
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/app.css" />
 
     <!-- Additional CSS Files -->
@@ -67,7 +68,7 @@
     <div class="row">
         <div class="large-12 columns">
 
-            <header class="row">
+            <!-- <header class="row">
                 <div class="large-12 columns">
                     <a href="{% url index %}" id="headerlogo">
                         <h1>Sleepdebtcalc</h1>
@@ -83,7 +84,7 @@
                     <hr/>
 
                 </div>
-            </header>
+            </header> -->
 
             <!-- PROMPT IE 6 USERS TO INSTALL CHROME FRAME. REMOVE THIS IF YOU SUPPORT IE 6.
             chromium.org/developers/how-tos/chrome-frame-getting-started -->
@@ -94,11 +95,11 @@
             {% block content %}{% endblock %}
             <!-- End Block -->
 
-            <footer class="row">
+            <!-- <footer class="row">
                 <div class="large-12 columns">
                     &copy; Sleepdebtcalc
                 </div>
-            </footer>
+            </footer> -->
 
         </div>
     </div>
@@ -110,11 +111,11 @@
 
     <!-- Included JS Files -->
     <script src="{{ MEDIA_URL }}js/foundation.min.js"></script>
+    <script src="{{ MEDIA_URL }}js/jquery.textchange.min.js"></script>
     <script src="{{ MEDIA_URL }}js/app.js"></script>
 
     <!-- Additional JS Files -->
     <!-- <script src="{{ MEDIA_URL }}js/jquery.responsive-tables.js"></script> -->
-    <!-- <script src="{{ MEDIA_URL }}js/jquery.textchange.min.js"></script> -->
 
     {% block javascript %}{% endblock %}
 

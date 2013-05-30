@@ -13,8 +13,9 @@ class Base(models.Model):
     class Meta:
         abstract = True
 
-# class Data(Base):
-#     data = models.CharField(blank=True, null=True, max_length=255)
+class Sleeper(Base):
+    username = models.CharField(blank=True, null=True, max_length=255)
+    hours = models.IntegerField(blank=True, null=True)
 
-#     def __unicode__(self):
-#         return u'%s' % (self.data)
+    def __unicode__(self):
+        return u'Sleeper: %s' % (self.username)

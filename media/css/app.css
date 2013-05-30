@@ -1,97 +1,261 @@
 /* Artfully masterminded by Kevin Xu <kevin@imkevinxu.com> */
 
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
 /* -----------------------------------------
-   SHARED STYLES
+   SHARED Styles
 ----------------------------------------- */
 
 .fl { float: left; }
 .fr { float: right; }
-.tl { text-align: left; }
-.tr { text-align: right; }
-.tc { text-align: center; }
-.center { margin: 0 auto; }
 .clear { clear: both; }
-.block { display: block !important; }
-.none { display: none !important; }
-.inline-block { display: inline-block !important; }
-.error { color: #c60f13; }
-.visible { opacity: 1; }
-.invisible { opacity: 0; }
+.block { display: block; }
+.hidden { display: none; }
+.inline_block { display: inline-block; }
+.error { color: #C0392B; }
+input.error::-webkit-input-placeholder { color: #C0392B; }
+input.error:-moz-placeholder { color: #C0392B; }
 
 /* -----------------------------------------
-   BASE STYLES
+   BASE Styles
 ----------------------------------------- */
 
-html, body {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-
 body {
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    color: #333;
+    color: #34495e;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    line-height: 1.231;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /*font-family: 'Crimson Text', serif;*/
-    color: #222;
+    font-family: "Lato", sans-serif;
 }
 
 /* -----------------------------------------
-   HEADER & FOOTER STYLES
+   CALCULATOR Styles
 ----------------------------------------- */
 
-header h1 {
-    display: inline-block;
-    font-weight: 500;
+#calculator {
+    margin-top: 100px;
 }
 
-header #right_nav {
-    position: absolute;
-    right: 15px;
-    top: 25px;
-}
-
-header #right_nav i {
-    position: relative;
-    padding-right: 4px;
-    top: 1px;
-}
-
-footer {
-    margin-top: 50px !important;
-    margin-bottom: 50px !important;
-}
-
-/* -----------------------------------------
-   LOGIN STYLES
------------------------------------------ */
-
-#login .columns {
-    margin-top: 20px;
-    padding: 20px 50px;
-    background-color: #E9E9E9;
-    border: 1px solid #C3C3C3;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-
-#login h2 {
+#calculator h1 {
+    font-weight: 300;
+    font-size: 3rem;
     text-align: center;
-    font-weight: 500;
 }
 
-#login li { list-style-type: none; }
-#login ul.errorlist {
-    color: red;
-    font-style: bold;
+#calculator #sleephours {
+    display: block;
+    width: 500px;
+    font-size: 7rem;
+    border: none;
+    margin: 50px auto 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    height: 140px;
+    background: inherit;
 }
 
-#login input[type=submit] {
-    width: 120px;
-    margin-top: 10px;
-    margin-left: 50%;
-    left: -60px;
+#calculator #sleephours:focus {
+    background: inherit;
 }
+
+#calculator #congrats h3,
+#calculator #good h3,
+#calculator #drowsy h3 {
+    text-align: center;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+#calculator #congrats h3 {
+    background-color: #2ECC71;
+}
+
+#calculator #good h3 {
+    background-color: #3498DB;
+}
+
+#calculator #good a {
+    color: inherit;
+    -webkit-animation: blink 1.5s steps(5, start) infinite;
+    -moz-animation: blink 1.5s steps(5, start) infinite;
+    -o-animation: blink 1.5s steps(5, start) infinite;
+    animation: blink 1.5s steps(5, start) infinite;
+}
+
+#calculator #drowsy h3 {
+    background-color: #E74C3C;
+}
+
+#calculator #drowsy h4 {
+    font-size: 1.7rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    position: relative;
+}
+
+#calculator .total {
+    font-size: 2.7rem;
+    font-weight: 300;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+}
+
+#calculator .block {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+#calculator #weekdebt .block {
+    background-color: #1ABC9C;
+}
+
+#calculator #monthdebt .block {
+    background-color: #3498DB;
+}
+
+#calculator #yeardebt .block {
+    background-color: #9B59B6;
+}
+
+/* -----------------------------------------
+   PLEDGE Styles
+----------------------------------------- */
+
+#pledge {
+    margin-top: 50px;
+}
+
+#pledge h1 {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+#pledge form {
+    margin: 50px auto;
+    background-color: #ECF0F1;
+    padding: 60px 0;
+}
+
+#pledge form label {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+#pledge form input[type=text] {
+    display: inline-block;
+    width: 250px;
+    font-size: 3rem;
+    font-weight: 300;
+    border: none;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    background: inherit;
+}
+
+#pledge form input[type=text]:focus {
+    background: inherit;
+}
+
+#pledge form input[type=submit] {
+    display: block;
+    background-color: #2ECC71;
+    border: none;
+    font-size: 2.5rem;
+    padding: 15px 50px;
+    color: white;
+    margin-top: 50px;
+}
+
+#pledge form input[type=submit]:hover {
+    background-color: #27AE60;
+}
+
+
+
+
+#certificate {
+    border: 1px solid #ccc;
+    background-image: url(http://subtlepatterns.com/patterns/lightpaperfibers.png);
+    padding: 1.5em 3em 3em;
+    -moz-box-shadow:    3px 3px 6px 0px #A0A0A0;
+    -webkit-box-shadow: 3px 3px 6px 0px #A0A0A0;
+    box-shadow:         3px 3px 6px 0px #A0A0A0;
+}
+
+#certificate h3 {
+    font-family: 'Buenard', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+.ribbon {
+    font-size: 24px !important;
+    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+    width: 50%;
+    position: relative;
+    background: #50ACEB;
+    color: #fff;
+    text-align: center;
+    padding: .7em 2em; /* Adjust to suit */
+    margin: 2em auto 2em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.3em solid #4391C6;
+    z-index: -1;
+}
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.7em;
+    border-left-color: transparent;
+}
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.7em;
+    border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #4F6E96 transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+.non-semantic-protector { position: relative; z-index: 1; }
+
+/* END SPACING */

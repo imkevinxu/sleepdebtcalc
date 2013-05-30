@@ -6,26 +6,58 @@
 
 {% block content %}
 
-<div id="main" class="row">
-    <div class="large-12 columns">
-        <h2>Thanks for using Django Project Builder!</h2>
-        <blockquote>
-            <h5 style="margin-top: 0">You are using a custom fork by <a href="https://github.com/imkevinxu" target="_blank">imkevinxu</a></h5>
+<div id="calculator" class="row animated fadeInDown">
+    <div class="twelve columns">
 
-            <li style="margin-left:35px"><h5><a href="http://jinja.pocoo.org/docs/" target="_blank">Jinja2</a> templating engine enabled with <a href="https://github.com/coffin/coffin" target="_blank">Coffin</a></h5></li>
+        <h1>How many hours do you sleep per night</h1>
 
-            <li style="margin-left:35px"><h5><a href="https://github.com/django-debug-toolbar/django-debug-toolbar" target="_blank">Django Debug Toolbar</a> enabled</h5></li>
+        <input type="text" id="sleephours" placeholder="?">
 
-            <li style="margin-left:35px"><h5><a href="https://docs.djangoproject.com/en/dev/topics/auth/#using-bcrypt-with-django" target="_blank">bcrypt</a> password hashing enabled</h5></li>
+        <div id="congrats" class="hidden">
+            <h3>Congratulations!<br/>
+            You get more sleep than the average American :)</h3>
+        </div>
 
-            <li style="margin-left:35px"><h5><a href="https://www.djangoproject.com/" target="_blank">Django</a> 1.4 with <a href="http://south.readthedocs.org/en/0.7.6/index.html" target="_blank">South</a> database migration</h5></li>
+        <div id="good" class="hidden">
+            <h3>You're getting the perfect amount of sleep per night, give yourself a pat on the head <a href="http://i.imgur.com/5cFEEHu.gif" target="_blank">;)</a></h3>
+        </div>
 
-            <p>It's highly experimental and constantly being updated with random best practices so check out the fork on <a href="https://github.com/imkevinxu/django-projectbuilder" target="_blank">Github</a> or email Kevin at <a href="mailto:kevin@imkevinxu.com?Subject=Awesome Django Project Builder Fork!" target="_blank">kevin@imkevinxu.com</a> and let him know what you think!</p>
-        </blockquote>
+        <div id="drowsy" class="hidden">
+            <h3>Drowsiness is red alert!<br/>
+                You have sleep debt :(</h3>
 
-        <br/>
-        <h5>Original DPB built by the kickass people at <a href="http://builtbyptm.com/blog/announcing-django-project-builder-v01/" target="_blank">PTM</a></h5>
-        <p>Feel free to contribute improvements to the original project on <a href="https://github.com/prototypemagic/django-projectbuilder" target="_blank">the GitHub page</a></p>
+            <h4>If you continue to sleep like that...</h4>
+            <h4>In 1 WEEK you'll have a sleep debt of: <span id="weektotal" class="total"></span></h4>
+            <div id="weekdebt"></div>
+
+            <h4>In 1 MONTH you'll have a sleep debt of: <span id="monthtotal" class="total"></span></h4>
+            <div id="monthdebt"></div>
+
+            <h4>In 1 YEAR you'll have a sleep debt of: <span id="yeartotal" class="total"></span></h4>
+            <div id="yeardebt"></div>
+        </div>
+
+    </div>
+</div>
+
+<div id="pledge" class="row hidden">
+    <div class="twelve columns">
+
+        <center>
+            <h1>Join {{n}} other people who have pledged to sleep away their sleep debt</h1>
+
+            <form action="{% url create %}" method="post">{% csrf_token %}
+
+                <label for="username">I, </label>
+                <input type="text" name="username" id="username" placeholder="Gatsby">
+                <label for="username">, pledge to sleep more</label>
+
+                <input type="submit" value="I Promise" />
+
+            </form>
+
+        </center>
+
     </div>
 </div>
 

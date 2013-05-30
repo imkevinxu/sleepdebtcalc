@@ -16,6 +16,29 @@ from sleepdebtcalc.models import *
 from sleepdebtcalc.model_forms import *
 from sleepdebtcalc.forms import *
 
-#@login_required
+reserved = ["login", "logout", "create"]
+
 def index(request):
+    n = len(Sleeper.objects.all())
     return render(request, "index.html", locals())
+
+def create(request):
+    if request.POST and "username" in request.POST:
+        username = request.POST["username"].lower().replace(" ", "")
+        if username in reserved:
+            return redirect(index)
+
+        sleeper, created = Sleeper.objects.get_or_create(username=username)
+        if created:
+            sleeper.hours = 0
+            sleeper.save()
+
+        return redirect(show, username=username)
+    return index(request)
+
+def show(request, username):
+    try:
+        sleeper = Sleeper.objects.get(username=username.lower())
+        return render(request, "show.html", locals())
+    except Sleeper.DoesNotExist:
+        return redirect(index)

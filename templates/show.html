@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}{{ username }}'s {{ super() }}{% endblock %}
+{% block meta_description %}{% endblock %}
+
+{% block extra_head %}{% endblock %}
+
+{% block content %}
+
+<div class="non-semantic-protector">
+    <h1 class="ribbon">
+        <strong class="ribbon-content">{{ username }}</strong>
+    </h1>
+</div>
+
+<div id="certificate" class="row">
+    <div class="twelve columns">
+
+        <h3>Certified Walker 2013</h3>
+
+        <div class="row">
+            <div class="six columns">
+                <img src="http://farm1.staticflickr.com/13/14900584_05d7b5b5c6_b.jpg" id="walkingroad">
+            </div>
+
+            <div class="six columns">
+
+                <p><strong>{{ username }}</strong> is a certified walker in the Walk Year registry for 2013. I have committed to walking more each day to live a healthier life and be more awesome. </p>
+
+                <blockquote>Researchers found that walking briskly for 30 minutes every day lowers your odds ... of heart disease, diabetes, and stroke. <a href="http://articles.cnn.com/2008-06-12/health/healthmag.walking.health_1_metabolic-syndrome-reduction-in-heart-disease-risk-postmenopausal-women?_s=PM:HEALTH" target="_blank">[citation]</a></blockquote>
+
+                <p>
+                    <strong>Participate</strong> in the race.
+                    <strong>Try</strong> out the <a href="http://www.walkingwizard.org/" target="_blank">Walking Wizard</a>.<br/>
+                    <strong>Share</strong> your Walk Year certificate.
+                </p>
+
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="I'm a Certified Walker for 2013" data-via="walkyear" data-size="large" data-related="imkevinxu" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascript %}{% endblock %}
