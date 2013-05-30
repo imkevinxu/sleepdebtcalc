@@ -11,23 +11,20 @@
 
     <title>{% block title %}Sleep Debt Calculator{% endblock %}</title>
     <meta name="description" content="{% block meta_description %}{% endblock %}" />
-    {# TODO: <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}images/favicon.png" /> #}
+    <link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}images/favicon.png" />
 
     <!-- Apple Meta Data -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {# TODO: <link rel="apple-touch-icon-precomposed" href="{{ MEDIA_URL }}images/apple-touch-icon.png" /> #}
+    <link rel="apple-touch-icon-precomposed" href="{{ MEDIA_URL }}images/apple-touch-icon.png" />
 
     <!-- Facebook Meta Data -->
-    <!-- <meta property="og:url" content="http://example.com/" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="http://example.com{{ MEDIA_URL }}images/logo.png" />
-    <meta property="og:type" content="website" /> -->
-
-    <!-- Included CSS Files (Uncompressed) -->
-    <!-- <link rel="stylesheet" href="{{ MEDIA_URL }}css/foundation.css"> -->
+    <meta property="og:url" content="http://sleepdebtcalc.com/" />
+    <meta property="og:title" content="Sleep Debt Calculator" />
+    <meta property="og:description" content="Visualize your sleep debt with this cleanly designed calculator and learn how much of a toll even missing one hour of sleep can have on your body." />
+    <meta property="og:image" content="http://sleepdebtcalc.com{{ MEDIA_URL }}images/logo.png" />
+    <meta property="og:type" content="website" />
 
     <!-- Included CSS Files -->
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/normalize.css" />
@@ -37,7 +34,6 @@
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/foundation.icons.css">
-    <!-- <link rel="stylesheet" href="{{ MEDIA_URL }}css/responsive-tables.css"> -->
 
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="{{ MEDIA_URL }}css/ie.css">
@@ -97,12 +93,6 @@
             {% block content %}{% endblock %}
             <!-- End Block -->
 
-            <!-- <footer class="row">
-                <div class="large-12 columns">
-                    &copy; Sleepdebtcalc
-                </div>
-            </footer> -->
-
         </div>
     </div>
     {# End Content #}
@@ -121,4 +111,3 @@
 
 </body>
 </html>
-
