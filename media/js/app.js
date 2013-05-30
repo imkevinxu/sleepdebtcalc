@@ -39,9 +39,9 @@
           $("#drowsy h3").after($(".social"));
           $("#drowsy").append($(".social").clone().addClass("temp"));
           var debt = 8 - hours;
-          $("#weektotal").text(7*debt + " HOURS");
-          $("#monthtotal").text(31*debt + " HOURS");
-          $("#yeartotal").text(365*debt + " HOURS");
+          $("#weektotal").text(Math.round(7*debt) + " HOURS");
+          $("#monthtotal").text(Math.round(31*debt) + " HOURS");
+          $("#yeartotal").text(Math.round(365*debt) + " HOURS");
           for (var i = 0; i < 7*debt; i++) {
             $("#weekdebt").append("<div class=\"block\"></div>");
           }
