@@ -273,4 +273,12 @@ input.error:-moz-placeholder { color: #C0392B; }
     #calculator #sleephours {
         width: 100%;
     }
+
+    #calculator .total {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        display: block;
+        margin: 20px auto;
+    }
 }
