@@ -19,10 +19,13 @@
     if (isNumber(hours)) {
       timeout = setTimeout(function() {
         hours = parseFloat(hours);
-        $("#suspicious, #congrats, #good, #drowsy").addClass("hidden");
+        $("#wat, #suspicious, #congrats, #good, #drowsy").addClass("hidden");
         $("#pledge, .social").removeClass("hidden").addClass("animated fadeInDown");
         $(".temp").remove();
-        if (hours >= 24) {
+        if (hours < 0) {
+          $("#wat").removeClass("hidden").addClass("animated fadeInDown");
+          $("#wat h3").after($(".social"));
+        } else if (hours >= 24) {
           $("#suspicious").removeClass("hidden").addClass("animated fadeInDown");
           $("#suspicious h3").after($(".social"));
         } else if (hours > 8) {

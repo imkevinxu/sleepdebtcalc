@@ -62,6 +62,7 @@ h1, h2, h3, h4, h5, h6 {
     background: inherit;
 }
 
+#calculator #wat h3,
 #calculator #suspicious h3,
 #calculator #congrats h3,
 #calculator #good h3,
@@ -74,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 50px;
 }
 
+#calculator #wat h3,
 #calculator #suspicious h3 {
     background-color: #9B59B6;
 }
