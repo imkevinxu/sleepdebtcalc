@@ -35,6 +35,7 @@
           $("#good").removeClass("hidden").addClass("animated fadeInDown");
           $("#good h3").after($(".social"));
         } else {
+          $("#weekdebt, #monthdebt, #yeardebt").empty();
           $("#drowsy").removeClass("hidden").addClass("animated fadeInDown");
           $("#drowsy h3").after($(".social"));
           $("#drowsy").append($(".social").clone().addClass("temp"));
@@ -42,13 +43,13 @@
           $("#weektotal").text(Math.round(7*debt) + " HOURS");
           $("#monthtotal").text(Math.round(31*debt) + " HOURS");
           $("#yeartotal").text(Math.round(365*debt) + " HOURS");
-          for (var i = 0; i < 7*debt; i++) {
+          for (var i = 0; i < Math.round(7*debt); i++) {
             $("#weekdebt").append("<div class=\"block\"></div>");
           }
-          for (var i = 0; i < 31*debt; i++) {
+          for (var i = 0; i < Math.round(31*debt); i++) {
             $("#monthdebt").append("<div class=\"block\"></div>");
           }
-          for (var i = 0; i < 365*debt; i++) {
+          for (var i = 0; i < Math.round(365*debt); i++) {
             $("#yeardebt").append("<div class=\"block\"></div>");
           }
         }
