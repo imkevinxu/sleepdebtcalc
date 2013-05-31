@@ -25,7 +25,7 @@
         if (hours < 0) {
           $("#wat").removeClass("hidden").addClass("animated fadeInDown");
           $("#wat h3").after($(".social"));
-        } else if (hours >= 24) {
+        } else if (hours > 24) {
           $("#suspicious").removeClass("hidden").addClass("animated fadeInDown");
           $("#suspicious h3").after($(".social"));
         } else if (hours > 8) {
