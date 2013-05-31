@@ -19,7 +19,7 @@
     if (isNumber(hours)) {
       timeout = setTimeout(function() {
         hours = parseFloat(hours);
-        $("#wat, #suspicious, #congrats, #good, #drowsy").addClass("hidden");
+        $("#wat, #suspicious, #congrats, #good, #drowsy, #tips").addClass("hidden");
         $("#pledge, .social").removeClass("hidden").addClass("animated fadeInDown");
         $(".temp").remove();
         if (hours < 0) {
@@ -36,9 +36,9 @@
           $("#good h3").after($(".social"));
         } else {
           $("#weekdebt, #monthdebt, #yeardebt").empty();
-          $("#drowsy").removeClass("hidden").addClass("animated fadeInDown");
+          $("#drowsy, #tips").removeClass("hidden").addClass("animated fadeInDown");
           $("#drowsy h3").after($(".social"));
-          $("#drowsy").append($(".social").clone().addClass("temp"));
+          $("#tips").append($(".social").clone().addClass("temp"));
           var debt = 8 - hours;
           $("#weektotal").text(Math.round(7*debt) + " HOURS");
           $("#monthtotal").text(Math.round(31*debt) + " HOURS");

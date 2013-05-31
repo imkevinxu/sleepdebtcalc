@@ -23,6 +23,7 @@ body {
     font-family: "Lato", sans-serif;
     font-size: 14px;
     line-height: 1.231;
+    margin-bottom: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,11 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     background: inherit;
 }
 
-#calculator #wat h3,
-#calculator #suspicious h3,
-#calculator #congrats h3,
-#calculator #good h3,
-#calculator #drowsy h3 {
+#calculator h3 {
     text-align: center;
     color: #FFF;
     font-weight: 400;
@@ -100,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #E74C3C;
 }
 
-#calculator #drowsy h4 {
+#calculator h4 {
     font-size: 1.7rem;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -138,6 +135,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #calculator #yeardebt {
     margin-bottom: 30px;
+}
+
+#calculator #tips h3 {
+    background-color: #34495E;
+}
+
+#calculator h6 {
+    font-weight: 300;
 }
 
 /* -----------------------------------------
@@ -261,6 +266,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social {
+    margin-top: 50px;
     text-align: center;
 }
 

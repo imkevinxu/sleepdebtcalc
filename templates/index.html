@@ -45,13 +45,29 @@
             <div id="yeardebt"></div>
         </div>
 
+        <div id="tips" class="hidden">
+            <h3>Incurring sleep debt has its consequences</h3>
+
+            <h4>Decreased alertness and ability to maintain focus</h4>
+
+            <h4>Extreme emotions and mood swings</h4>
+
+            <h4>Decrease in energy and motivation</h4>
+
+            <h4>Hindrance of bodily control and coordination</h4>
+
+            <h4>Degree of physical pain such as headaches</h4>
+
+            <h6>Source: <a href="http://www.end-your-sleep-deprivation.com/effects-of-sleep-deprivation.html" target="_blank">http://www.end-your-sleep-deprivation.com/effects-of-sleep-deprivation.html</a></h6>
+        </div>
+
     </div>
 </div>
 
 <div id="pledge" class="row hidden">
     <div class="twelve columns">
 
-        <h1>Join {{n}} other people who have pledged to get rid of their sleep debt</h1>
+        <h1><strong>Join {{n}} people</strong> who have pledged to get rid of their sleep debt</h1>
 
         <form action="{% url create %}" method="post">{% csrf_token %}
 
