@@ -126,7 +126,7 @@ TEMPLATE_DIRS = (
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['sleepdebtcalc.com']
+ALLOWED_HOSTS = ['sleepdebtcalc.com', 'sleepdebtcalc.herokuapp.com']
 
 # Uncomment any apps you want to use. We will not
 # install all apps by default, but all of the
